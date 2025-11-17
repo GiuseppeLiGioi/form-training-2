@@ -44,10 +44,35 @@ const styles = StyleSheet.create({
     gap: 20,
   },
 
-  containerPicker: {},
-
   pickerForm: {
     minWidth: "80%",
+  },
+
+  flatList: {
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 10,
+  },
+
+  containerAnagraphic: {
+    flexDirection: "row",
+    gap: 50,
+  },
+
+  containerDetails: {
+    flexDirection: "row",
+    gap: 50,
+  },
+
+  containerSinglePerson: {
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 10,
+    padding: 15,
+    minWidth: "80%",
+    borderWidth: 2,
+    borderRadius: 15,
+    borderColor: "blue",
   },
 });
 
