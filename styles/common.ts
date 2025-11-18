@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 12,
     borderColor: "white",
-    height: 200,
     width: "48%",
   },
 
@@ -121,6 +120,14 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "white",
     fontWeight: "500",
+  },
+
+  buttonRemoveItem: {
+    backgroundColor: "rgba(175, 175, 175, 0.2)",
+    marginTop: 10,
+    width: "70%",
+    alignSelf: "center",
+    borderRadius: 15,
   },
 });
 

@@ -3,11 +3,11 @@ import styles from "@/styles/common";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
-import { FlatList, ImageBackground, Text, View } from "react-native";
+import { Button, FlatList, ImageBackground, Text, View } from "react-native";
 
 export default function New1Screen() {
   const [columns, setColumns] = useState<number>(2);
-  const { personas } = useAppContext();
+  const { personas, deletePersona } = useAppContext();
 
   return (
     <LinearGradient
@@ -60,6 +60,14 @@ export default function New1Screen() {
                   </View>
 
                   <View style={styles.lineSeparatorCard}></View>
+
+                  <View style={styles.buttonRemoveItem}>
+                    <Button
+                      title="Rimuovi"
+                      color="#fa4949ff"
+                      onPress={() => deletePersona(itemData.item.id)}
+                    />
+                  </View>
                 </LinearGradient>
               )}
               keyExtractor={(item) => item.id.toString()}
