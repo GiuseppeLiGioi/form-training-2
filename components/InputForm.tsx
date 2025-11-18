@@ -73,11 +73,14 @@ export default function InputForm({ onSubmit }: InputFormProps) {
         <Switch value={isPatented} onValueChange={setIsPatented} />
       </View>
 
+      <View style={styles.lineSeprator}></View>
+
       <View>
         <Picker
           selectedValue={employment}
           onValueChange={(value) => setEmployment(value as EnumProperty)}
           style={styles.pickerForm}
+          itemStyle={{ color: "black" }}
         >
           <Picker.Item label="Student" value={EnumProperty.STUDENT} />
           <Picker.Item label="Worker" value={EnumProperty.WORKER} />
@@ -85,35 +88,37 @@ export default function InputForm({ onSubmit }: InputFormProps) {
         </Picker>
       </View>
 
-      <Button
-        title="Aggiungi"
-        onPress={() => {
-          const error = validation();
+      <View style={styles.buttonOuter}>
+        <Button
+          title="Aggiungi"
+          onPress={() => {
+            const error = validation();
 
-          if (error) {
-            return Toast.show({
-              type: "error",
-              text1: "Errore !",
-              text2: error,
-              position: "bottom",
-            });
-          }
-          const success = onSubmit({ name, age, isPatented, employment });
-          if (success) {
-            Toast.show({
-              type: "success",
-              text1: "Persona aggiunta !",
-              text2: "Inserimento avvenuto con successo",
-              position: "bottom",
-            });
+            if (error) {
+              return Toast.show({
+                type: "error",
+                text1: "Errore !",
+                text2: error,
+                position: "bottom",
+              });
+            }
+            const success = onSubmit({ name, age, isPatented, employment });
+            if (success) {
+              Toast.show({
+                type: "success",
+                text1: "Persona aggiunta !",
+                text2: "Inserimento avvenuto con successo",
+                position: "bottom",
+              });
 
-            setName("");
-            setAge(0);
-            setIsPatented(false);
-            setEmployment(EnumProperty.STUDENT);
-          }
-        }}
-      />
+              setName("");
+              setAge(0);
+              setIsPatented(false);
+              setEmployment(EnumProperty.STUDENT);
+            }
+          }}
+        />
+      </View>
     </View>
   );
 }

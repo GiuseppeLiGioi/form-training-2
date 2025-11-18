@@ -2,16 +2,18 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   containerHome: {
+    flex: 1,
     justifyContent: "center",
-    marginTop: 20,
-    padding: 16,
-    backgroundColor: "#b6d2ffff",
-    height: "100%",
+  },
+
+  backgroundImage: {
+    opacity: 0.65,
   },
 
   topTextHome: {
     fontSize: 16,
     textAlign: "center",
+    color: "#363636ff",
   },
 
   containerForm: {
@@ -24,18 +26,24 @@ const styles = StyleSheet.create({
   },
 
   innerInput: {
-    borderWidth: 2,
+    borderWidth: 3,
     borderRadius: 15,
     padding: 15,
     minWidth: "80%",
     textAlign: "center",
     color: "black",
-    borderColor: "blue",
+    borderColor: "#ffffff",
   },
 
   labelForm: {
     textAlign: "center",
     fontSize: 16,
+    marginBottom: 5,
+  },
+  lineSeprator: {
+    width: "80%",
+    height: 2,
+    backgroundColor: "#ffffff",
   },
 
   containerSwitch: {
@@ -73,6 +81,12 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 15,
     borderColor: "blue",
+  },
+
+  buttonOuter: {
+    padding: 8,
+    backgroundColor: "white",
+    borderRadius: 12,
   },
 });
 

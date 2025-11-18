@@ -1,7 +1,8 @@
 import InputForm from "@/components/InputForm";
 import { Persona, useAppContext } from "@/contexts/AppContext";
 import styles from "@/styles/common";
-import { Text, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { ImageBackground, Text } from "react-native";
 
 export default function HomeScreen() {
   const { personas, addPersona } = useAppContext();
@@ -12,13 +13,22 @@ export default function HomeScreen() {
 
   return (
     <>
-      <View style={styles.containerHome}>
-        <Text style={styles.topTextHome}>
-          Benvenuto! Compila i campi del form e visualizza il risultato nelle
-          altre pagine!
-        </Text>
-        <InputForm onSubmit={handleSubmit} />
-      </View>
+      <LinearGradient
+        colors={["#2612ddff", "#dbdadaff"]}
+        style={styles.containerHome}
+      >
+        <ImageBackground
+          source={require("../../assets/images/background.jpg")}
+          resizeMode="cover"
+          style={[styles.containerHome, styles.backgroundImage]}
+        >
+          <Text style={styles.topTextHome}>
+            Benvenuto! Compila i campi del form e visualizza il risultato nelle
+            altre pagine!
+          </Text>
+          <InputForm onSubmit={handleSubmit} />
+        </ImageBackground>
+      </LinearGradient>
     </>
   );
 }
