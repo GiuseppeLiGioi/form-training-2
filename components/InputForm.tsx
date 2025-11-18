@@ -2,6 +2,7 @@ import { EnumProperty } from "@/contexts/AppContext";
 import { Picker } from "@react-native-picker/picker";
 import { useState } from "react";
 import { Button, Switch, Text, TextInput, View } from "react-native";
+import Toast from "react-native-toast-message";
 import styles from "../styles/common";
 
 type InputFormProps = {
@@ -21,12 +22,20 @@ export default function InputForm({ onSubmit }: InputFormProps) {
     EnumProperty.STUDENT
   );
 
+  const validation = () => {
+    if (!name.trim() || name.length < 8)
+      return "Il nome è obbligatorio. Almeno 8 caratteri!";
+    if (age > 100 || age < 1) return "L'età deve essere compresa tra 1 e 100!";
+    if (employment === null) return "Seleziona la tua occupazione!";
+  };
+
   return (
     <View style={styles.containerForm}>
       <View>
         <Text style={styles.labelForm}>Nome:</Text>
         <TextInput
           placeholder="inserisci il tuo nome"
+          placeholderTextColor="black"
           value={name}
           onChangeText={setName}
           style={styles.innerInput}
@@ -73,8 +82,25 @@ export default function InputForm({ onSubmit }: InputFormProps) {
       <Button
         title="Aggiungi"
         onPress={() => {
+          const error = validation();
+
+          if (error) {
+            return Toast.show({
+              type: "error",
+              text1: "Errore !",
+              text2: "Compila i campi correttamente",
+              position: "bottom",
+            });
+          }
           const success = onSubmit({ name, age, isPatented, employment });
           if (success) {
+            Toast.show({
+              type: "success",
+              text1: "Persona aggiunta !",
+              text2: "Inserimento avvenuto con successo",
+              position: "bottom",
+            });
+
             setName("");
             setAge(0);
             setIsPatented(false);
