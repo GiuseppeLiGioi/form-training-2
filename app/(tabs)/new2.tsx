@@ -3,6 +3,7 @@ import styles from "@/styles/common";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 import { ImageBackground, Text, View } from "react-native";
+import UserInputNumber from "../../components/my/UserInputNumber";
 
 export default function New1Screen() {
   const [columns, setColumns] = useState<number>(2);
@@ -19,8 +20,13 @@ export default function New1Screen() {
         style={styles.containerHome}
         imageStyle={styles.backgroundImage}
       >
-        <View>
-          <Text> Inserisci un numero, l'app proverà ad indovinarlo!</Text>
+        <View style={styles.containerNumberGame}>
+          <Text style={{ color: "white", fontSize: 20, textAlign: "center" }}>
+            Inserisci un numero, l'app proverà ad indovinarlo!
+          </Text>
+          <View style={styles.containerAllComponents}>
+            <UserInputNumber />
+          </View>
         </View>
       </ImageBackground>
     </LinearGradient>

@@ -129,6 +129,42 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     borderRadius: 15,
   },
+
+  /*stile del gioco in new2 */
+
+  containerNumberGame: {
+    flex: 1,
+    padding: 12,
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 15,
+  },
+
+  containerAllComponents: {
+    flex: 1,
+    gap: 15,
+    marginTop: 15,
+  },
+
+  containerNumberForm: {
+    padding: 16,
+    gap: 15,
+    borderRadius: 20,
+  },
+
+  containerNumberFormButton: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    margin: 5,
+  },
+
+  buttonChoose: {
+    backgroundColor: "rgba(175, 175, 175, 0.2)",
+    alignSelf: "center",
+    padding: 4,
+    borderRadius: 15,
+  },
 });
 
 export default styles;
