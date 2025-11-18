@@ -1,4 +1,4 @@
-import InputForm from "@/components/InputForm";
+import InputForm from "@/components/my/InputForm";
 import { Persona, useAppContext } from "@/contexts/AppContext";
 import styles from "@/styles/common";
 import { LinearGradient } from "expo-linear-gradient";

@@ -2,7 +2,7 @@ import { useAppContext } from "@/contexts/AppContext";
 import styles from "@/styles/common";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
-import { ImageBackground } from "react-native";
+import { ImageBackground, Text, View } from "react-native";
 
 export default function New1Screen() {
   const [columns, setColumns] = useState<number>(2);
@@ -18,7 +18,11 @@ export default function New1Screen() {
         resizeMode="cover"
         style={styles.containerHome}
         imageStyle={styles.backgroundImage}
-      ></ImageBackground>
+      >
+        <View>
+          <Text> Inserisci un numero, l'app proverà ad indovinarlo!</Text>
+        </View>
+      </ImageBackground>
     </LinearGradient>
   );
 }

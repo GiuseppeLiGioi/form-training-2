@@ -11,7 +11,7 @@ import {
   View,
 } from "react-native";
 import Toast from "react-native-toast-message";
-import styles from "../styles/common";
+import styles from "../../styles/common";
 
 type InputFormProps = {
   onSubmit: (data: {
