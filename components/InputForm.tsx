@@ -1,7 +1,7 @@
 import { EnumProperty } from "@/contexts/AppContext";
 import { Picker } from "@react-native-picker/picker";
 import { useState } from "react";
-import { Button, Switch, Text, TextInput, View } from "react-native";
+import { Button, Keyboard, Switch, Text, TextInput, View } from "react-native";
 import Toast from "react-native-toast-message";
 import styles from "../styles/common";
 
@@ -57,7 +57,12 @@ export default function InputForm({ onSubmit }: InputFormProps) {
                 numeric
               ); /*diversamente avrei dovuto dichiarare l'età come stringa e mettere nel textInput  keyboardType="numeric" */
           }}
+          maxLength={2}
           keyboardType="numeric"
+          returnKeyType="send" /*compare send sulla tastiera per chiudere il tastierino*/
+          onSubmitEditing={
+            Keyboard.dismiss
+          } /*funzione che chiude il tastierino al send, importare KeyBoard*/
           style={styles.innerInput}
         />
       </View>
