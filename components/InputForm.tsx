@@ -31,8 +31,7 @@ export default function InputForm({ onSubmit }: InputFormProps) {
   );
 
   const validation = () => {
-    if (!name.trim() || name.length < 8)
-      return "Il nome è obbligatorio. Almeno 8 caratteri!";
+    if (!name.trim() || name.length === 0) return "Il nome è obbligatorio.";
     if (age > 100 || age < 1) return "L'età deve essere compresa tra 1 e 100!";
     if (employment === null) return "Seleziona la tua occupazione!";
   };
@@ -43,7 +42,7 @@ export default function InputForm({ onSubmit }: InputFormProps) {
         <Text style={styles.labelForm}>Nome:</Text>
         <TextInput
           placeholder="inserisci il tuo nome"
-          placeholderTextColor="black"
+          placeholderTextColor="white"
           value={name}
           onChangeText={setName}
           style={styles.innerInput}
@@ -88,7 +87,7 @@ export default function InputForm({ onSubmit }: InputFormProps) {
           selectedValue={employment}
           onValueChange={(value) => setEmployment(value as EnumProperty)}
           style={styles.pickerForm}
-          itemStyle={{ color: "black" }}
+          itemStyle={{ color: "white" }}
         >
           <Picker.Item label="Student" value={EnumProperty.STUDENT} />
           <Picker.Item label="Worker" value={EnumProperty.WORKER} />

@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   topTextHome: {
     fontSize: 16,
     textAlign: "center",
-    color: "#363636ff",
+    color: "white",
   },
 
   containerForm: {
@@ -31,13 +31,14 @@ const styles = StyleSheet.create({
     padding: 15,
     minWidth: "80%",
     textAlign: "center",
-    color: "black",
-    borderColor: "#ffffff",
+    color: "white",
+    borderColor: "#aad9ffff",
   },
 
   labelForm: {
     textAlign: "center",
     fontSize: 16,
+    color: "white",
     marginBottom: 5,
   },
   lineSeprator: {
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
     minWidth: "80%",
     borderWidth: 2,
     borderRadius: 15,
-    borderColor: "blue",
+    borderColor: "#ffffff",
   },
 
   buttonOuter: {

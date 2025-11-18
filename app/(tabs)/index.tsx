@@ -20,7 +20,8 @@ export default function HomeScreen() {
         <ImageBackground
           source={require("../../assets/images/background.jpg")}
           resizeMode="cover"
-          style={[styles.containerHome, styles.backgroundImage]}
+          style={styles.containerHome}
+          imageStyle={styles.backgroundImage}
         >
           <Text style={styles.topTextHome}>
             Benvenuto! Compila i campi del form e visualizza il risultato nelle

@@ -14,7 +14,8 @@ export default function New1Screen() {
       <ImageBackground
         source={require("../../assets/images/background.jpg")}
         resizeMode="cover"
-        style={[styles.containerHome, styles.backgroundImage]}
+        style={styles.containerHome}
+        imageStyle={styles.backgroundImage}
       >
         {personas.length === 0 ? (
           <Text style={styles.topTextHome}>Nessuna persona da mostrare</Text>
