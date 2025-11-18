@@ -17,11 +17,13 @@ export type Persona = {
 type AppContext = {
   personas: Persona[];
   addPersona: (persona: Omit<Persona, "id">) => boolean;
+  deletePersona: (id: number) => boolean;
 };
 
 export const AppContext = createContext<AppContext>({
   personas: [],
   addPersona: () => false,
+  deletePersona: () => false,
 });
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
@@ -38,8 +40,16 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
+  const deletePersona = (id: number) => {
+    if (id) {
+      setPersonas(personas.filter((p) => p.id !== id));
+      return true;
+    }
+    return false;
+  };
+
   return (
-    <AppContext.Provider value={{ personas, addPersona }}>
+    <AppContext.Provider value={{ personas, addPersona, deletePersona }}>
       {children}
     </AppContext.Provider>
   );
