@@ -88,7 +88,7 @@ export default function InputForm({ onSubmit }: InputFormProps) {
             return Toast.show({
               type: "error",
               text1: "Errore !",
-              text2: "Compila i campi correttamente",
+              text2: error,
               position: "bottom",
             });
           }
