@@ -3,6 +3,7 @@ import { Persona, useAppContext } from "@/contexts/AppContext";
 import styles from "@/styles/common";
 import { LinearGradient } from "expo-linear-gradient";
 import { ImageBackground, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   const { personas, addPersona } = useAppContext();
@@ -23,11 +24,13 @@ export default function HomeScreen() {
           style={styles.containerHome}
           imageStyle={styles.backgroundImage}
         >
-          <Text style={styles.topTextHome}>
-            Benvenuto! Compila i campi del form e visualizza il risultato nelle
-            altre pagine!
-          </Text>
-          <InputForm onSubmit={handleSubmit} />
+          <SafeAreaView style={{ flex: 1 }}>
+            <Text style={styles.topTextHome}>
+              Benvenuto! Compila i campi del form e visualizza il risultato
+              nelle altre pagine!
+            </Text>
+            <InputForm onSubmit={handleSubmit} />
+          </SafeAreaView>
         </ImageBackground>
       </LinearGradient>
     </>
