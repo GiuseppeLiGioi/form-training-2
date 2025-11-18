@@ -1,7 +1,15 @@
 import { EnumProperty } from "@/contexts/AppContext";
 import { Picker } from "@react-native-picker/picker";
 import { useState } from "react";
-import { Button, Keyboard, Switch, Text, TextInput, View } from "react-native";
+import {
+  Alert,
+  Button,
+  Keyboard,
+  Switch,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 import Toast from "react-native-toast-message";
 import styles from "../styles/common";
 
@@ -95,12 +103,9 @@ export default function InputForm({ onSubmit }: InputFormProps) {
             const error = validation();
 
             if (error) {
-              return Toast.show({
-                type: "error",
-                text1: "Errore !",
-                text2: error,
-                position: "bottom",
-              });
+              return Alert.alert("Errore nella compilazione", error, [
+                { text: "Okay", style: "destructive" },
+              ]);
             }
             const success = onSubmit({ name, age, isPatented, employment });
             if (success) {
