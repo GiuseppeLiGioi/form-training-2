@@ -15,7 +15,10 @@ export default function HomeScreen() {
   return (
     <>
       <LinearGradient
-        colors={["#2612ddff", "#dbdadaff"]}
+        colors={[
+          "#2612ddff",
+          "#dbdadaff",
+        ]} /*Messi entrambi GRADIENT + BACKGROUND SOLO PER USARLI ENTRAMBI IN UN SINGOLO PROGETTO */
         style={styles.containerHome}
       >
         <ImageBackground

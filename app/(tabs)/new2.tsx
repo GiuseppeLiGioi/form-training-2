@@ -33,7 +33,11 @@ export default function New1Screen() {
               columnWrapperStyle={{ justifyContent: "space-between" }}
               renderItem={(itemData) => (
                 <LinearGradient
-                  colors={["#4B3F92", "#8d7bf1ff", "#2BB3C7"]}
+                  colors={[
+                    "#4B3F92",
+                    "#8d7bf1ff",
+                    "#2BB3C7",
+                  ]} /*Messi entrambi GRADIENT + BACKGROUND SOLO PER USARLI ENTRAMBI IN UN SINGOLO PROGETTO */
                   start={{ x: 0, y: 0 }}
                   end={{ x: 1, y: 1 }}
                   style={styles.containerSinglePerson}
