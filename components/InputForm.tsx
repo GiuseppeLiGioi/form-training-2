@@ -39,6 +39,7 @@ export default function InputForm({ onSubmit }: InputFormProps) {
           value={name}
           onChangeText={setName}
           style={styles.innerInput}
+          autoCapitalize="words"
         />
       </View>
 
