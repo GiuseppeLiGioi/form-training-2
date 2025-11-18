@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 16,
     width: "100%",
-    marginTop: 20,
     gap: 20,
   },
 
@@ -56,38 +55,72 @@ const styles = StyleSheet.create({
   pickerForm: {
     minWidth: "80%",
   },
-
-  flatList: {
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 10,
-  },
-
-  containerAnagraphic: {
-    flexDirection: "row",
-    gap: 50,
-  },
-
-  containerDetails: {
-    flexDirection: "row",
-    gap: 50,
-  },
-
-  containerSinglePerson: {
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 10,
-    padding: 15,
-    minWidth: "80%",
-    borderWidth: 2,
-    borderRadius: 15,
-    borderColor: "#ffffff",
-  },
-
   buttonOuter: {
     padding: 8,
     backgroundColor: "white",
     borderRadius: 12,
+  },
+
+  containerFlatList: {
+    flex: 1,
+    padding: 8,
+  },
+
+  flatList: {
+    gap: 20,
+  },
+
+  containerSinglePerson: {
+    borderWidth: 2,
+    padding: 8,
+    borderRadius: 12,
+    borderColor: "white",
+    height: 200,
+    width: "48%",
+  },
+
+  containerAnagraphic: {
+    padding: 12,
+    gap: 10,
+  },
+
+  nameCard: {
+    fontSize: 22,
+    color: "white",
+    fontWeight: "bold",
+  },
+
+  ageCard: {
+    fontSize: 20,
+    color: "white",
+    fontWeight: "bold",
+  },
+
+  employmentCard: {
+    fontSize: 20,
+    color: "white",
+    fontWeight: "500",
+  },
+
+  lineSeparatorCard: {
+    height: 1,
+    width: "85%",
+    backgroundColor: "white",
+    alignSelf: "center",
+    alignItems: "center",
+  },
+
+  containerDetails: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 12,
+    gap: 10,
+  },
+
+  isPatented: {
+    fontSize: 14,
+    color: "white",
+    fontWeight: "500",
   },
 });
 

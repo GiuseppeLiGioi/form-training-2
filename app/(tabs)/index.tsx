@@ -24,7 +24,7 @@ export default function HomeScreen() {
           style={styles.containerHome}
           imageStyle={styles.backgroundImage}
         >
-          <SafeAreaView style={{ flex: 1, padding: 8 }}>
+          <SafeAreaView style={{ flex: 1 }}>
             <Text style={styles.topTextHome}>
               Benvenuto! Compila i campi del form e visualizza il risultato
               nelle altre pagine!
