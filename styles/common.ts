@@ -165,6 +165,10 @@ const styles = StyleSheet.create({
     padding: 4,
     borderRadius: 15,
   },
+
+  sameWidth: {
+    width: 120,
+  },
 });
 
 export default styles;

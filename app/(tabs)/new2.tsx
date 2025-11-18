@@ -3,6 +3,7 @@ import styles from "@/styles/common";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 import { ImageBackground, Text, View } from "react-native";
+import FeedbackButtons from "../../components/my/FeedbackButtons";
 import UserInputNumber from "../../components/my/UserInputNumber";
 
 export default function New1Screen() {
@@ -26,6 +27,7 @@ export default function New1Screen() {
           </Text>
           <View style={styles.containerAllComponents}>
             <UserInputNumber />
+            <FeedbackButtons />
           </View>
         </View>
       </ImageBackground>
